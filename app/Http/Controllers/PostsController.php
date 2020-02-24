@@ -26,9 +26,9 @@ class PostsController extends Controller
     public function index()
     {
         //$posts=DB::select('SELECT * FROM posts');
-        $invoices= Post::all();
+        $posts= Post::all();
         // $invoices=Post::orderBy('created_at','desc')->paginate(5);
-        return view('pages.invoices')->with('invoices', $invoices);
+        return view('posts.index')->with('posts', $posts);
     }
 
     /**

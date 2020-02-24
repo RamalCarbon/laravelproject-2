@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\invoices;
 class PagesController extends Controller
 {
     public function index(){
@@ -18,6 +18,7 @@ class PagesController extends Controller
     }
 
     public function invoices(){
-        return view('pages.invoices');
+        $invoices = invoices::all(); 
+        return view('posts.invoices', ['invoices' => $invoices]);
     }
 }
