@@ -19,6 +19,14 @@ class PagesController extends Controller
 
     public function invoices(){
         $invoices = invoices::all(); 
+        $invoice = new invoices([
+            'client_name' => 'test',
+            'client_address' => 'test',
+            'notes' => 'test',
+            'date_created' => '2020-02-02',
+            'access_code' => 1           
+        ]);
+        $invoice->save();
         return view('posts.invoices', ['invoices' => $invoices]);
     }
 }

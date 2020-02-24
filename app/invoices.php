@@ -11,8 +11,15 @@ class invoices extends Model
         //Primary Key
         public $primaryKey='invoice_no';
         //Timestamps
-        public $timestamps=true;
+        public $timestamps=false;
 
+        public $fillable = [
+            'client_name',
+            'client_address',
+            'notes',
+            'date_created',
+            'access_code'
+        ];
     public function line_items(){
         return $this->hasMany(line_items::class);
     }
