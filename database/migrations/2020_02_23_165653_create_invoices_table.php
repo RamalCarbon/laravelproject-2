@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Invoices extends Migration
+class CreateInvoicesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -18,7 +18,7 @@ class Invoices extends Migration
             $table->string('client_name');
             $table->string('client_address');
             $table->mediumText('notes');
-            $table->date('created_at');
+            $table->date('date_created');
             $table->integer('access_code');
         });
     }

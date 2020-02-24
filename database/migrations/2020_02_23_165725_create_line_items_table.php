@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class LineItem extends Migration
+class CreateLineItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class LineItem extends Migration
      */
     public function up()
     {
-        Schema::create('line_item', function (Blueprint $table) {
+        Schema::create('line_items', function (Blueprint $table) {
             $table->bigIncrements('item_no');
             $table->unsignedInteger('invoice_no');
-            $table->string('invoice_no');
             $table->mediumText('scope');
             $table->integer('fee');
             $table->timestamps();
-
         });
     }
 
@@ -31,6 +29,6 @@ class LineItem extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('line_items');
     }
 }
