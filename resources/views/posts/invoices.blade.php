@@ -11,7 +11,7 @@
             </div>
         @endforeach
         {{-- to make the page numbers appear at the bottom of the screen --}}
-        {{$invoices->links()}}
+        {{-- $invoices->links() --}}
     @else
         <p>No Invoices found</p>
     @endif
