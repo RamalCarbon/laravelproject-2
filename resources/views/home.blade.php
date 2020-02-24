@@ -20,7 +20,7 @@
                             <tr>
                                 <td>Title</td>
                                 <td></td>
-                                <td></td>
+                                <td> </td>
                             </tr>
                             @foreach($posts as $post)
                                 <tr>
